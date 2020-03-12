@@ -31,12 +31,22 @@ int main()
     assert(!same_necklace("x", ""));
     assert(same_necklace("", ""));
 
+    cout << "Success!" << endl;
+
     return 0;
 }
 
 bool same_necklace(const string str_1, const string str_2)
 {
-    if (str_1.length() != str_2.length()) return false;
+    int str_length = str_1.length();
+
+    if (str_length != str_2.length()) return false;
+    if (str_length == 0) return true;
+    if (str_length == 1)
+    {
+        if (str_1[0] == str_2[0]) return true;
+        else return false;
+    }
 
     for (int it_1 = 0; it_1 < str_1.length(); ++it_1)
     {
@@ -45,16 +55,19 @@ bool same_necklace(const string str_1, const string str_2)
             if (str_1[it_1] == str_2[it_2])
             {
                 int start = it_2;
-                int current = start + 1;
+                int current_1 = it_1 + 1;
+                int current_2 = start + 1;
 
-                while (current != start)
+                while (current_2 != start)
                 {
-                    if (current >= str_2.length()) current = 0;
-                    if (str_1[current] != str_2[current]) break;
-                    ++current;
+                    if (current_1 == str_length) current_1 = 0;
+                    if (current_2 == str_length) current_2 = 0;
+                    if (str_1[current_1] != str_2[current_2]) break;
+                    ++current_1;
+                    ++current_2;
                 }
 
-                if (current == start) return true;
+                if (current_2 == start) return true;
             }
         }
     }
