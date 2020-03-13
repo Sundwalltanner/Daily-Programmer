@@ -1,0 +1,5 @@
+[package]
+name = "yahtzee_upper_section"
+version = "0.1.0"
+authors = ["Tanner Sundwall <stanner@pdx.edu>"]
+edition = "2018"

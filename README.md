@@ -10,3 +10,4 @@ I've used C++ the most frequently, so I'll likely have more challenges completed
 As mentioned, I've been using Rust a lot more recently, and I've been really enjoying it. I made [a Nonogram game](https://github.com/Sundwalltanner/Rust-Nonogram) in Rust that I'm quite proud of.
 
 * [[2020-03-09] Challenge #383 [Easy] Necklace matching](https://github.com/Sundwalltanner/Daily-Programmer/blob/master/rust/necklace_matching)
+* [[2019-11-11] Challenge #381 [Easy] Yahtzee Upper Section Scoring](https://github.com/Sundwalltanner/Daily-Programmer/blob/master/rust/yahtzee_upper_section)
