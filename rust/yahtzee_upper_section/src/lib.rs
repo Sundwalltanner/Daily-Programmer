@@ -3,6 +3,8 @@
 //! The upper section scoring in the dice game of Yahtzee deals with determining the greatest
 //! sum of numbers that are the same in a list of integers.
 
+use std::collections::HashMap;
+
 /// Checks a list containing `u64` values, finds the sum of those that are equal, and returns the
 /// greatest sum.
 ///
@@ -19,7 +21,6 @@
 ///                             4868, 1654, 30864, 4868, 30864]), 123456);
 /// ```
 pub fn yahtzee_upper(rolls: Vec<u64>) -> u64 {
-    use std::collections::HashMap;
     let mut roll_sums: HashMap<u64, u64> = HashMap::new();
 
     for x in &rolls {
