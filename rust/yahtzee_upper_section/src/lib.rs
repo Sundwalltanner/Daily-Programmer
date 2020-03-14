@@ -23,8 +23,8 @@ use std::collections::HashMap;
 pub fn yahtzee_upper(rolls: Vec<u64>) -> u64 {
     let mut roll_sums: HashMap<u64, u64> = HashMap::new();
 
-    for x in &rolls {
-        let a_sum = roll_sums.entry(*x).or_insert(0);
+    for x in rolls {
+        let a_sum = roll_sums.entry(x).or_insert(0);
         *a_sum += x;
     }
 
